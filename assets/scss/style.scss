@@ -1,0 +1,38 @@
+// Importing Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Raleway:300');
+
+// Font Styling
+* > div {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+}
+
+.font-white {
+	color: white;
+}
+
+// Background default to #333 for fall back in non-gradient 
+// accepting browsers
+body {
+	background: #333;
+}
+
+
+// Overriding the default btn styling
+.btn, .btn:visited, .btn:hover, .btn:focus, .btn:active {
+	background: none !important;
+	border: none !important;
+	outline:none !important;
+	box-shadow: none !important;
+}
+
+// Styling the introduction webpage
+#intro {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(#41295a, #2F0743);
+}
