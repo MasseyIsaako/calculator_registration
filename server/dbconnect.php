@@ -18,11 +18,9 @@
      */
     $dbConnect = mysqli_connect($db_host, $db_user, $db_pwd, $db_name);
 
-    if (mysqli_connect_errno()) {
+    if (mysqli_connect_errno()){
         echo "<p class='font-white'>Connection to database: " . $db_name . ", returned error: " . mysqli_connect_errno() . "</p>";
     }
-
-    // $sql = "INSERT INTO users VALUES ('Tumema', 'Isaako', 'tumems@isaako.com', '123652321', '42')";
 
     // if (mysqli_query($dbConnect, $sql)) {
     //     echo "<p class='font-white'>New record sucessfully added.</p>";

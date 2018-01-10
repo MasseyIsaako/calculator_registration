@@ -46,15 +46,19 @@ body {
 
 #register {
 	flex-direction: column;
+
+	.list-error-container {
+		margin-top: 50px;
+	}
 }
 
 #register-form {
-	margin-top:100px;
+	margin-top: 100px;
 
 	//Removing the input spinners from the number input
 	input[type=number]::-webkit-inner-spin-button, 
 	input[type=number]::-webkit-outer-spin-button { 
-	  -webkit-appearance: none; 
+	  -webkit-appearance: none;
 	  margin: 0; 
 	}
 }
