@@ -11,20 +11,14 @@
 	color: white;
 }
 
+.h3 {
+	margin-bottom: 100px;
+}
+
 // Background default to #333 for fall back in non-gradient 
 // accepting browsers
 body {
 	background: white;
-}
-
-// Overriding the default btn styling
-#intro {
-	.btn, .btn:visited, .btn:hover, .btn:focus, .btn:active {
-		background: none !important;
-		border: none !important;
-		outline:none !important;
-		box-shadow: none !important;
-	}
 }
 
 // Styling nav
@@ -34,8 +28,8 @@ body {
 }
 
 // Styling the introduction webpage
-#intro, #register {
-	position: fixed;
+#wrapper {
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -44,7 +38,7 @@ body {
 	background: linear-gradient(#41295a, #2F0743);
 }
 
-#register {
+.wrapper-flex-content {
 	flex-direction: column;
 
 	.list-error-container {
@@ -53,7 +47,6 @@ body {
 }
 
 #register-form {
-	margin-top: 100px;
 
 	//Removing the input spinners from the number input
 	input[type=number]::-webkit-inner-spin-button, 
@@ -62,3 +55,13 @@ body {
 	  margin: 0; 
 	}
 }
+
+.table {
+	width:50%;
+}
+
+
+
+
+
+
