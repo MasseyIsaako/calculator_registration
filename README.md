@@ -1,10 +1,9 @@
 # Calculator and Registration Project
-Created by Massey Isa'ako
 
-This project is a learning experience for me, in terms of learning more about PHP and MYSQL.
+This is a personal learning project mostly in developing PHP and MYSQL skills.
 
-This calculator/registration form is a medium through which I hope to learn more about form validation via php and running MYSQL queries through to a DB.
+This calculator/registration features form validation via php and runs MYSQL queries through to the Database.
 
-I am also using this as an opportunity to familiarise myself with the PSR-2 standards as well as gaining basic generic knowledge about PHP. E.g. types of classes, function/methods, interfaces etc.
+Development of familiarity with PSR-2 standards as well as gaining basic knowledge about PHP. E.g. types of classes, function/methods etc.
 
-I have been developing this project using Vagrant to host my local LAMP environment.
+I have been developing this project using Vagrant to host my local LAMP virtual environment.
