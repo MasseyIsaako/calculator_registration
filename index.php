@@ -13,8 +13,8 @@
     /**
      * In order to test whether iput is being registered by the form,
      * use the testInput function and place it just after the if($_POST)
-     *  statement in order to echo out the resulting user input. Use the 
-     *  $_POST array as the parameter to pass through the test function.
+     * statement in order to echo out the resulting user input. Use the 
+     * $_POST array as the parameter to pass through the test function.
      *
      * E.g. if($_POST) {
      *     testInput($_POST);

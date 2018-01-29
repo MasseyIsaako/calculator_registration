@@ -1,10 +1,11 @@
 <?php
     /**
-     * Setting variables to conect through to phpmyadmin db
+     * Setting variables to conect through to phpmyadmin database
+     * 
      * @var $db_host string - server hostname
-     * @var $db_user string - server username to access db
-     * @var $db_pwd string - server password to access db
-     * @var $db_name string - db name to reference access
+     * @var $db_user string - server username to access database
+     * @var $db_pwd string - server password to access database
+     * @var $db_name string - database name to reference access
      */
     $db_host = "localhost";
     $db_user = "root";

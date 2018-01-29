@@ -15,6 +15,10 @@
 	margin-bottom: 100px;
 }
 
+.capitalise-on {
+	text-transform: capitalize;
+}
+
 // Background default to #333 for fall back in non-gradient 
 // accepting browsers
 body {
@@ -38,15 +42,16 @@ body {
 	background: linear-gradient(#41295a, #2F0743);
 }
 
+// Setting flex properties to set direction to horizontal
 .wrapper-flex-content {
 	flex-direction: column;
-
-	.list-error-container {
-		margin-top: 50px;
-	}
 }
 
-#register-form {
+.list-error-container {
+	margin-top: 50px;
+}
+
+#register-form, #calculator-form {
 
 	//Removing the input spinners from the number input
 	input[type=number]::-webkit-inner-spin-button, 
@@ -59,9 +64,3 @@ body {
 .table {
 	width:50%;
 }
-
-
-
-
-
-

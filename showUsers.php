@@ -5,7 +5,7 @@
     require "server/dbconnect.php";
 
     // Using select query to retrieve firstname, lastname and email field data.
-    $sql = "SELECT * FROM `users`";
+    $sql = "SELECT `firstname`, `lastname`, `email` FROM `users`";
     $result = mysqli_query($dbConnect, $sql);
 
     if ($result) {
@@ -38,8 +38,8 @@
                 <?php foreach ($userData as $data): ?>
                 <tr>
                     <th scope="row" class="font-white"><?= $rowCount += 1; ?></th>
-                    <td class="font-white"><?= $data['firstname']; ?></td>
-                    <td class="font-white"><?= $data['lastname']; ?></td>
+                    <td class="font-white capitalise-on"><?= $data['firstname']; ?></td>
+                    <td class="font-white capitalise-on"><?= $data['lastname']; ?></td>
                     <td class="font-white"><?= $data['email']; ?></td>
                 </tr>
                 <?php endforeach; ?>
