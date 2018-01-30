@@ -15,10 +15,6 @@
         // to this array and then echoed back to the user
         $errors = [];
 
-        // Operations array for validating operation input from user in the
-        // front end form.
-        $valid_operations = ["+", "/", "-", "*"];
-
         // Validating $firstnumber to check if values exists and correct input.
         // I.e. number input
         if (!$firstnumber) {
@@ -27,14 +23,6 @@
             array_push($errors, "Please remove letters and special characters from your first number.");
         } elseif ($firstnumber < 0) {
             array_push($errors, "First number must be greater than 0.");
-        }
-
-        // Validating $operation to check if values exists and correct input.
-        // I.e. + - * / input
-        if (!$operation) {
-            array_push($errors, "An operation is required. i.e. + - * /");
-        } elseif (!in_array($operation, $valid_operations)) {
-            array_push($errors, "Please enter a valid operator. i.e. + - * /");
         }
 
         // Validating $secondnumber to check if values exists and correct input.
@@ -58,6 +46,10 @@
             // user input.
             $Calculation = new FinalCalculation();
             $result = $Calculation->identifyOperator($firstnumber, $secondnumber, $operation);
+
+            if (is_infinite($result)) {
+                $result = "Infinite";
+            }
         }
     }
 ?>
@@ -73,12 +65,17 @@
         <h3 class="font-white h3 h3-calc">Calculator</h3>
 
         <?php if (strlen($result) != 0): ?>
-                <!-- <h4 class="font-white"><?= $firstnumber . " "
-                                         . $operation . " "
-                                         . $secondnumber . " = "
-                                         . $result ?>
-                </h4> -->
-                <h4 class="font-white">Final Result: <?= $result ?></h4>
+            <h6 class="font-white">
+                Final Result: 
+            </h6>
+            <h5 class="font-white">
+            <?= 
+                    $firstnumber . " "
+                     . $operation . " "
+                     . $secondnumber . " = "
+                     . number_format($result, 2);
+                ?>
+            </h5>
         <?php endif; ?>
 
         <form method="POST" action="calculator.php" id="calculator-form" autocomplete="on">
@@ -91,7 +88,13 @@
             <div class="row">
                 <div class="form-group col">
                     <label class="font-white" for="operation">Operation:</label>
-                    <input type="text" name="operation" id="operation" class="form-control" aria-describedby="operationHelp" placeholder="+" value="<?php if (isset($operation)) { echo $operation; } else { echo ""; } ?>">
+                    <br>
+                    <select name="operation" class="custom-select">
+                        <option value="+"> &#43; </option>
+                        <option value="-"> &#8722; </option>
+                        <option value="/"> &#247; </option>
+                        <option value="*"> &#215; </option>
+                    </select>
                 </div>
             </div>
             <div class="row">

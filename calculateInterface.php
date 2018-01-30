@@ -36,24 +36,4 @@ class FinalCalculation implements CalculateTemplate
                 break;
         }
     }
-
-    public function calculateAdd ($firstnumber, $secondnumber)
-    {
-        return $firstnumber + $secondnumber;
-    }
-
-    // public function calculateSubtract ($firstnumber, $secondnumber)
-    // {
-    //     echo "Hello";
-    // }
-
-    // public function calculateDivide ($firstnumber, $secondnumber)
-    // {
-    //     echo "Hello there peoples of the earth, this thing is now working";
-    // }
-
-    // public function calculateMutliply ($firstnumber, $secondnumber)
-    // {
-    //     echo "Hello there peoples of the earth, this thing is now working";
-    // }
 }
