@@ -62,18 +62,18 @@
 
     <!-- This div wraps around entire table -->
     <div id="wrapper" class="wrapper-flex-content">
-        <h3 class="font-white h3 h3-calc">Calculator</h3>
+        <h3 class="font-white h3-calc">Calculator</h3>
 
         <?php if (strlen($result) != 0): ?>
             <h6 class="font-white">
                 Final Result: 
             </h6>
-            <h5 class="font-white">
+            <h5 class="font-white h5-output-result">
             <?= 
                     $firstnumber . " "
                      . $operation . " "
                      . $secondnumber . " = "
-                     . number_format($result, 2);
+                     . number_format($result);
                 ?>
             </h5>
         <?php endif; ?>
