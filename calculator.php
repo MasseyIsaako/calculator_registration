@@ -56,8 +56,8 @@
 
             // Calling new instance of Calculation class to pass through validated
             // user input.
-            $Calculation = new Calculation();
-            $Calculation->finalCalculation($firstnumber, $operation, $secondnumber);
+            $Calculation = new FinalCalculation();
+            $result = $Calculation->identifyOperator($firstnumber, $secondnumber, $operation);
         }
     }
 ?>
@@ -70,7 +70,16 @@
 
     <!-- This div wraps around entire table -->
     <div id="wrapper" class="wrapper-flex-content">
-        <h3 class="font-white h3">Calculator</h3>
+        <h3 class="font-white h3 h3-calc">Calculator</h3>
+
+        <?php if (strlen($result) != 0): ?>
+                <!-- <h4 class="font-white"><?= $firstnumber . " "
+                                         . $operation . " "
+                                         . $secondnumber . " = "
+                                         . $result ?>
+                </h4> -->
+                <h4 class="font-white">Final Result: <?= $result ?></h4>
+        <?php endif; ?>
 
         <form method="POST" action="calculator.php" id="calculator-form" autocomplete="on">
             <div class="row">

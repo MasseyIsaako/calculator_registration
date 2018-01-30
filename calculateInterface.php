@@ -3,16 +3,57 @@
 interface CalculateTemplate
 {
 
-    // Calculate the input
-    public function finalCalculation ($firstnumber, $operation, $secondnumber);
+    // Finding which operator to use
+    public function identifyOperator ($firstnumber, $secondnumber, $operation);
 }
 
-class Calculation implements CalculateTemplate
+class FinalCalculation implements CalculateTemplate
 {
-    public function finalCalculation ($firstnumber, $operation, $secondnumber) {
-        // var_dump($firstnumber);
-        // var_dump($operation);
-        // var_dump($secondnumber);
-        // die();
+    public function identifyOperator ($firstnumber, $secondnumber, $operation) {
+
+        // Using switch case to select which method to run, 
+        // based on $operation variable
+        switch ($operation) {
+            case "+":
+                $result = $firstnumber + $secondnumber;
+
+                return $result;
+                break;
+            case "-":
+                $result = $firstnumber - $secondnumber;
+
+                return $result;
+                break;
+            case "/":
+                $result = $firstnumber / $secondnumber;
+                
+                return $result;
+                break;
+            case "*":
+                $result = $firstnumber * $secondnumber;
+
+                return $result;
+                break;
+        }
     }
+
+    public function calculateAdd ($firstnumber, $secondnumber)
+    {
+        return $firstnumber + $secondnumber;
+    }
+
+    // public function calculateSubtract ($firstnumber, $secondnumber)
+    // {
+    //     echo "Hello";
+    // }
+
+    // public function calculateDivide ($firstnumber, $secondnumber)
+    // {
+    //     echo "Hello there peoples of the earth, this thing is now working";
+    // }
+
+    // public function calculateMutliply ($firstnumber, $secondnumber)
+    // {
+    //     echo "Hello there peoples of the earth, this thing is now working";
+    // }
 }
