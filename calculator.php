@@ -50,6 +50,25 @@
             if (is_infinite($result)) {
                 $result = "Infinite";
             }
+
+            switch ($operation) {
+                case "+":
+                    $operation = "&#43;";
+                    
+                    break;
+                case "-":
+                    $operation = "&#8722;";
+                    
+                    break;
+                case "/":
+                    $operation = "&#247;";
+
+                    break;
+                case "*":
+                    $operation = "&#215;";
+
+                    break;
+            }
         }
     }
 ?>
